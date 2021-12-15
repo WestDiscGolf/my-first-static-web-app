@@ -17,7 +17,7 @@ namespace Company.Function
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            var responseMessage = new { text = "Hello from the .NET API!" };
+            var responseMessage = new { text = $"Hello from the .NET API ({Guid.NewGuid()}!" };
 
             return new OkObjectResult(responseMessage);
         }
